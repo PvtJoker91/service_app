@@ -6,10 +6,10 @@ from clients.models import Client
 
 class Service(models.Model):
     name = models.CharField(max_length=50)
-    price = models.PositiveIntegerField()
+    full_price = models.PositiveIntegerField()
 
     def __str__(self):
-        return f'{self.name} | month price: {self.price} '
+        return f'{self.name} | month price: {self.full_price} '
 
 class Plan(models.Model):
     PLAN_TYPES = (
